@@ -1,0 +1,18 @@
+Kaggle links
+Hindi: https://www.kaggle.com/c/padhai-hindi-vow-cons-classification/
+Tamil: https://www.kaggle.com/c/padhai-tamil-vow-cons-classification
+
+Relation to capstone challenge
+This problem revolves around multilingual image classification using Neural Networks. Note that this is an important component of sign-board translation which will be the topic for the capstone challenge. 
+
+Languages and dataset
+The practice problem has essentially been split into two parts, one part for Tamil character classification and the other for Hindi. The possibility of doing it on two languages ensures that you are able to understand whether models generalise across variations in the dataset. You do not need to be familiar with the script of the languages to attempt the problems. Each image is 64x64 pixels, and contains the character to be classified superimposed over a random scenic background. You will be presented with two training sets of 10,000 images each, for Tamil and Hindi.For each language, we have selected 10 vowels and 10 consonants, and dataset of 10,000 images is made using all possible permutations of vowel-consonant pairs. 
+
+Model architecture
+We would recommend you to attempt these for two settings: (a) with only feed forward networks, and (b) with convolutional neural networks. Of course, you would need to try out different hyper-parameters (using MLFlow or equivalent) to obtain the best possible results. 
+
+Hint
+You have to classify the text into consonant and vowel. The firs thing therefore is to think about the final layer and the loss function. Here is a quick hint about that. Your neural network needs to be designed such that at the output layer, we have two separate sets of 10 classes, one set for vowels and the other set for consonants with a softmax for each of the two sets as pictured in the image below.Once you arrive at the Loss value for Vowels and Consonants, you have to sum them to get a Combined Loss. You can then use the Combined Loss value for back-propagation. 
+
+Logistics
+There is no certificate for this course. This is only a practice problem for you to build up expertise to be able to solve the capstone challenge. However, there will a Kaggle leaderboard and we would encourage you to compete with your peers on getting a higher accuracy.
